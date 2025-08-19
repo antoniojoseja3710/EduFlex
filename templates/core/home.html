@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Inicial</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'eduflex/css/style_home.css' %}">
+    <style>
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("{% static 'eduflex/img/image_background.jpg' %}");
+    background-size: cover;       /* cobre toda a tela */
+    background-position: center;  /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita repetição */
+    background-attachment: fixed;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">EduFlex</div>
+    <nav>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="matricular">Matricule-se</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="carousel">
+    <div class="slides">
+        <img src="{% static 'eduflex/img/carrossel1.jpg' %}" alt="Imagem 1">
+        <img src="{% static 'eduflex/img/carrossel2.jpg' %}" alt="Imagem 2">
+        <img src="{% static 'eduflex/img/carrossel3.jpg' %}" alt="Imagem 3">
+        <img src="{% static 'eduflex/img/carrossel4.jpg' %}" alt="Imagem 4">
+        <img src="{% static 'eduflex/img/carrossel5.jpg' %}" alt="Imagem 5">
+        <img src="{% static 'eduflex/img/carrossel6.jpg' %}" alt="Imagem 6">
+        <img src="{% static 'eduflex/img/carrossel7.png' %}" alt="Imagem 7">
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 EduFlex. Todos os direitos reservados.</p>
+    <p>Contato: contato@eduflex.com.br</p>
+</footer>
+
+</body>
+</html>

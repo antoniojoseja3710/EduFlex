@@ -1,0 +1,76 @@
+.form-container {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-curso p {
+    margin-bottom: 15px;
+}
+
+.form-curso label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-curso input,
+.form-curso select,
+.form-curso textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.titulo-form {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-aluno p {
+    margin-bottom: 15px;
+}
+
+.form-aluno label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-aluno input, 
+.form-aluno select, 
+.form-aluno textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-salvar {
+    background-color: #28a745;
+    color: white;
+}
+
+.botao-voltar {
+    background-color: #6c757d;
+    color: white;
+    margin-left: 10px;
+}

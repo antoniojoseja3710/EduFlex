@@ -1,0 +1,67 @@
+.lista-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.titulo-lista {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tabela-lista {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabela-lista th,
+.tabela-lista td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabela-lista th {
+    background-color: #f8f9fa;
+}
+
+.botao {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-novo {
+    background-color: #0d47a1;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.botao-voltar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.acao-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.acao-link:hover {
+    text-decoration: underline;
+}
+
+.acao-link.excluir {
+    color: #dc3545;
+}

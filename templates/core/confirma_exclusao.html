@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar Exclusão</title>
+    <link rel="stylesheet" href="{% static 'eduflex/css/style_confirmar_exclusao.css' %}">
+</head>
+<body>
+    <div class="confirm-container">
+        <h2 class="titulo">Confirmar Exclusão</h2>
+        <p class="mensagem">
+            Tem certeza que deseja excluir o {{ tipo }}: <strong>{{ objeto }}</strong>?
+        </p>
+        <form method="post" class="form-exclusao">
+            {% csrf_token %}
+            <button type="submit" class="botao botao-excluir">Sim, excluir</button>
+            <a href="javascript:history.back()" class="botao botao-cancelar">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

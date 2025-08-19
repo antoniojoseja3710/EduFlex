@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if form.instance.pk %}Editar Curso{% else %}Novo Curso{% endif %}</title>
+    <link rel="stylesheet" href="{% static 'eduflex/css/style_form.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="titulo-form">
+            {% if form.instance.pk %}Editar Curso{% else %}Novo Curso{% endif %}
+        </h2>
+
+        <form method="post" class="form-curso">
+            {% csrf_token %}
+
+            {% if form.non_field_errors %}
+                <ul class="erros-form">
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <p>
+                {{ form.nome.label_tag }}
+                {{ form.nome }}
+                {{ form.nome.errors }}
+            </p>
+            <p>
+                {{ form.duracao.label_tag }} (em anos) <!-- indicamos que é anos -->
+                {{ form.duracao }}
+                {{ form.duracao.errors }}
+            </p>
+            <p>
+                {{ form.vagas.label_tag }}
+                {{ form.vagas }}
+                {{ form.vagas.errors }}
+            </p>
+            <p>
+                {{ form.inicio.label_tag }}
+                {{ form.inicio }}
+                {{ form.inicio.errors }}
+            </p>
+
+            <button type="submit" class="botao botao-salvar">Salvar</button>
+        </form>
+
+        <a href="{% url 'core:lista_cursos' %}" class="botao botao-voltar">Voltar à lista</a>
+    </div>
+</body>
+</html>

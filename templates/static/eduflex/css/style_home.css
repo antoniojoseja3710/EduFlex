@@ -1,0 +1,115 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* organiza header, main e footer verticalmente */
+}
+
+header {
+    background-color: #A569BD; /* azul esverdeado principal */
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Faz o carousel crescer para preencher o espaço entre header e footer */
+.carousel {
+    flex: 1; /* ocupa o espaço restante */
+    display: flex;
+    align-items: center; /* centraliza verticalmente se quiser */
+    justify-content: center; /* centraliza horizontalmente */
+}
+
+header, footer {
+    padding: 20px;
+    background-color: #111133; /* exemplo semi-transparente */
+    color: white;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav a {
+    color: #feedbf; /* destaque claro nos links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    animation: slide 60s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #feedbf; /* fundo suave para a seção de cards */
+}
+
+.card {
+    background-color: #6fbcaa; /* card com cor da paleta */
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.card p {
+    color: #fffeedbf; /* texto mais suave */
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+

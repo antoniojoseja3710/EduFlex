@@ -1,0 +1,45 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos</title>
+    <link rel="stylesheet" href="{% static 'eduflex/css/style_lista.css' %}">
+</head>
+<body>
+    <div class="lista-container">
+        <h2 class="titulo-lista">Lista de Alunos</h2>
+        <a class="botao botao-novo" href="{% url 'core:cadastrar_aluno' %}">Novo Aluno</a>
+        <table class="tabela-lista">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Curso</th>
+                    <th>Início</th>
+                    <th>Fim</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for aluno in alunos %}
+                <tr>
+                    <td>{{ aluno.nome }}</td>
+                    <td>{{ aluno.email }}</td>
+                    <td>{{ aluno.curso.nome }}</td>
+                    <td>{{ aluno.inicio_curso|date:"d/m/Y" }}</td>
+                    <td>{{ aluno.fim_curso|date:"d/m/Y" }}</td>
+                    <td>
+                        <a class="acao-link" href="{% url 'core:editar_aluno' aluno.id %}">Editar</a> |
+                        <a class="acao-link excluir" href="{% url 'core:deletar_aluno' aluno.id %}">Excluir</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="6">Nenhum aluno cadastrado.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="botao botao-voltar" href="/">Voltar</a>
+    </div>
+</body>
+</html>

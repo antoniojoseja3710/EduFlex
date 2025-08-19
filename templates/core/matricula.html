@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrícula de Aluno</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'eduflex/css/style_form.css' %}">
+</head>
+<body>
+
+   <div class="form-container">
+    <h2 class="titulo-form">Formulário de Matrícula</h2>
+
+    {% if messages %}
+        <ul class="mensagens">
+            {% for message in messages %}
+                <li class="{{ message.tags }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form method="post" class="form-aluno">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="botao botao-salvar">Enviar Matrícula</button>
+        <a href="/" class="botao botao-voltar">Voltar</a>
+    </form>
+</div>
+    
+
+</body>
+</html>
