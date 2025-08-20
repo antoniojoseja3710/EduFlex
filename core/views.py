@@ -23,8 +23,7 @@ def login(request):
 
         if user:
             login_django(request, user)            
-                return redirect("/cursos")
-
+            return redirect("/cursos")
         return HttpResponse("Usuário ou Senha inválidos!")
 
 
