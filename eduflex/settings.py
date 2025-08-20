@@ -18,6 +18,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://eduflex-orc4.onrender.com",
+]
+
 
 # Application definition
 
