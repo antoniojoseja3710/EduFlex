@@ -22,11 +22,8 @@ def login(request):
         user = authenticate(username=username, password=senha)
 
         if user:
-            login_django(request, user)
-
-            if destino == "alunos":
-                return redirect("/alunos")
-            return redirect("/cursos")
+            login_django(request, user)            
+                return redirect("/cursos")
 
         return HttpResponse("Usuário ou Senha inválidos!")
 
