@@ -17,12 +17,17 @@ def login(request):
     else:
         username = request.POST.get('username')
         senha = request.POST.get('senha')
+        destino = request.POST.get('destino')  # pega o destino escolhido
         
         user = authenticate(username=username, password=senha)
 
         if user:
             login_django(request, user)
+
+            if destino == "alunos":
+                return redirect("/alunos")
             return redirect("/cursos")
+
         return HttpResponse("Usuário ou Senha inválidos!")
 
 
