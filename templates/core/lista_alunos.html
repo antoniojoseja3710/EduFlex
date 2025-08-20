@@ -5,9 +5,36 @@
     <meta charset="UTF-8">
     <title>Lista de Alunos</title>
     <link rel="stylesheet" href="{% static 'eduflex/css/style_lista.css' %}">
+    <style>
+        .nav-botoes {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav-botoes a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 18px;
+            background-color: #007bff; /* azul */
+            color: #fff;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .nav-botoes a:hover {
+            background-color: #0056b3; /* azul mais escuro */
+        }
+    </style>
 </head>
 <body>
     <div class="lista-container">
+        
+        <!-- Botões de Navegação -->
+        <div class="nav-botoes">
+            <a href="{% url 'core:lista_cursos' %}">Gerenciar Cursos</a>
+            <a href="{% url 'core:lista_alunos' %}">Gerenciar Alunos</a>
+        </div>
+
         <h2 class="titulo-lista">Lista de Alunos</h2>
         <a class="botao botao-novo" href="{% url 'core:cadastrar_aluno' %}">Novo Aluno</a>
         <table class="tabela-lista">
